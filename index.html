@@ -45,75 +45,102 @@
 
     <main class="container">
       <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
-        <!-- Промо-блок сделала дивами. Или как-то иначе надо? Имена классов смущают еще. -->
+        
       <section class="promo">
         <h2 class="visually-hidden">Промо-блок товаров и услуг</h2>
-        <div class="item_1">
-          <h3>Материалы</h3>
-          <a class="button" href="#">На любой вкус</a>
-        </div>
-        <div class="item_2">
-          <h3>Инструмент</h3>
-          <a class="button" href="#">На все случаи</a>
-        </div>
-        <div class="item_3">
-          <h3>Техника</h3>
-          <a class="button" href="#">Для стройки</a>
-        </div>
-        <div class="item_4">
-          <h3>Скидки 50%</h3>
-          <a class="button" href="#">На 350 товаров</a>
-        </div>
-        <div class="item_5">
-          <h3>Доставка</h3>
-          <a class="button" href="#">Бесплатно</a>
-        </div>
-        <!-- Слайдеры тоже дивами, больше ничего не придумала -->
-        <div class="slider">
-          <div class="slider_1">
+
+        <div class="promo-left">
+          <div class="promo-item promo-item-materials">
+            <h3>Материалы</h3>
+            <a class="button" href="#">На любой вкус</a>
+          </div>
+          <div class="promo-item promo-item-tool">
+            <h3>Инструмент</h3>
+            <a class="button" href="#">На все случаи</a>
+          </div>
+          <div class="promo-slider promo-slider-drill">
             <h3>Дрели</h3>
             <p>Соседям на радость!</p>
+            <a class="button" href="catalog.html">Открыть каталог</a>
           </div>
-          <div class="slider_2">
+          <div class="promo-slider promo-slider-perforator">
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
+            <a class="button" href="catalog.html">Открыть каталог</a>
           </div>
-          <a class="button" href="catalog.html">Открыть каталог</a>
+        </div>
+
+        <div class="promo-right">
+          <div class="promo-item promo-item-tech">
+            <h3>Техника</h3>
+            <a class="button" href="#">Для стройки</a>
+          </div>
+          <div class="promo-item promo-item-sale">
+            <h3>Скидки 50%</h3>
+            <a class="button" href="#">На 350 товаров</a>
+          </div>
+          <div class="promo-item promo-item-delivery">
+            <h3>Доставка</h3>
+            <a class="button" href="#">Бесплатно</a>
+          </div>
         </div>
       </section>
       
       <section class="popular">
-        <h2>Популярные товары</h2>
+        <h2 class="section-title">Популярные товары</h2>
         <a class="button" href="#">Все популярные товары</a>
-        <ul class="popular-list">
-          <li class="popular-list-item">  <!-- Карточку товара надо в ссылку обернуть? -->
-            <img src="img/#.jpg" alt="Перфоратор BOSCH BFG 9000">
-            <h3>Перфоратор BOSCH BFG 9000</h3>
-            <span class="catalog-item-price-old"> 32 500 р.</span>
-            <span class="catalog-item-price">25 500 р.</span>
-          </li>
-          <li class="popular-list-item">
-            <img src="img/#.jpg" alt="Перфоратор BOSCH BFG 3000">
-            <h3>Перфоратор BOSCH BFG 3000</h3>
-            <span class="catalog-item-price-old"> 22 500 р.</span>
-            <span class="catalog-item-price">15 500 р.</span>
-          </li>
-          <li class="popular-list-item">
-            <img src="img/#.jpg" alt="Перфоратор BOSCH BFG 6000">
-            <h3>Перфоратор BOSCH BFG 6000</h3>
-            <span class="catalog-item-price-old"> 30 500 р.</span>
-            <span class="catalog-item-price">25 500 р.</span>
-          </li>
-          <li class="popular-list-item">
-            <img src="img/#.jpg" alt="Перфоратор BOSCH BFG 2000">
-            <h3>Перфоратор BOSCH BFG 2000</h3>
-            <span class="catalog-item-price">12 500 р.</span>
-          </li>
-        </ul>
+          <ul class="catalog-list popular-list">
+            <li class="catalog-item">
+              <img src="img/#.jpg" alt="Перфоратор BOSCH BFG 9000">
+              <h3>
+                <a href="catalog-item.html">Перфоратор BOSCH BFG 9000</a>
+              </h3>
+              <span class="catalog-item-price-old">32 500 p.</span>
+              <span class="catalog-item-price">25 500 р.</span>
+              <p class="hover-buttons">
+                <a class="button-cart" href="#">Купить</a>
+                <a class="button-marker" href="#">В закладки</a>
+              </p>
+            </li>
+            <li class="catalog-item">
+                <img src="img/#.jpg" alt="Перфоратор BOSCH BFG 3000">
+                <h3>
+                  <a href="catalog-item.html">Перфоратор BOSCH BFG 3000</a>
+                </h3>
+                <span class="catalog-item-price-old">22 500 p.</span>
+                <span class="catalog-item-price">15 500 р.</span>
+                <p class="hover-buttons">
+                  <a class="button-cart" href="#">Купить</a>
+                  <a class="button-marker" href="#">В закладки</a>
+                </p>
+            </li>
+            <li class="catalog-item">
+              <img src="img/#.jpg" alt="Перфоратор BOSCH BFG 6000">
+              <h3>
+                <a href="catalog-item.html">Перфоратор BOSCH BFG 6000</a>
+              </h3>
+              <span class="catalog-item-price-old">30 500 p.</span>
+              <span class="catalog-item-price">25 500 р.</span>
+              <p class="hover-buttons">
+                <a class="button-cart" href="#">Купить</a>
+                <a class="button-marker" href="#">В закладки</a>
+              </p>
+            </li>
+            <li class="catalog-item">
+              <img src="img/#.jpg" alt="Перфоратор BOSCH BFG 2000">
+              <h3>
+                <a href="catalog-item.html">Перфоратор BOSCH BFG 2000</a>
+              </h3>
+              <span class="catalog-item-price">12 500 р.</span>
+              <p class="hover-buttons">
+                <a class="button-cart" href="#">Купить</a>
+                <a class="button-marker" href="#">В закладки</a>
+              </p>
+            </li>
       </section>
       
       <section class="brands">
-        <h2>Популярные производители</h2>
+        <h2 class="section-title">Популярные производители</h2>
         <a class="button" href="#">Все производители</a>
         <ul class="brands-list">
           <li class="brands-list-item">
@@ -144,7 +171,7 @@
       </section>
       
       <section class="services">
-        <h2>Сервисы</h2>
+        <h2 class="section-title">Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
@@ -153,7 +180,7 @@
           <li class="service-guarantee">Гарантия</li>
           <li class="service-credit">Кредит</li>
         </ul>
-        <div class="slider-delivery">
+        <div class="service-slider service-slider-delivery">
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо 
             к вашему подъезду совершенно бесплатно!
@@ -161,14 +188,14 @@
             поднимая его на ваш этаж!
           </p>
         </div>
-        <div class="slider-guarantee">
+        <div class="service-slider service-slider-guarantee">
           <h3>Гарантия</h3>
           <p>Если купленный у нас товар поломается или заискрит, 
             а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть 		уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
             Дом уж восстановите как-нибудь сами.
           </p>
         </div>
-        <div class="slider-credit">
+        <div class="service-slider service-slider-credit">
           <h3>Кредит</h3>
           <p>Залезть в долговую яму стало проще! 
             Кредитные консультанты придут вам на помощь.
@@ -179,7 +206,7 @@
 
       <section class="about-us">
         <h2 class="section-title">Компания «Техномарт»</h2>
-        <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и <br>
+        <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и 
           строительства не оставит  равнодушными любителей  сэкономить на гастарбайтерах.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br>
           Техномарт работает со многими транспортными компаниями: </p>
@@ -208,7 +235,7 @@
       <ul class="footer-nav">
         <li><a href="#">Компания</a></li>
         <li><a href="#">Новости</a></li>
-        <li><a href="#">Каталог</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
