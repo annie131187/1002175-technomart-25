@@ -59,11 +59,77 @@
             <h1 class="page-title">Перфораторы</h1>
             <section class="filters">
                 <h2 class="visually-hidden">Фильтр товаров</h2>
-                <!--Здесь будет форма-->
+                <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                    <div>
+                        <p>Фильтр:</p>
+                        <p class="filter-title">Цена:</p>
+                        <div class="filter-slider">
+                            <div class="filter-slider-line"></div>
+                            <div class="filter-slider-right-btn"></div>
+                            <div class="filter-slider-left-btn"></div>
+                        </div>
+                        <div>
+                            <input class="filter-price-min" type="text" value="0">
+                            <span> - </span>
+                            <input class="filter-price-max" type="text" value="30000">
+                        </div>    
+                    </div>
+                    <fieldset>
+                        <legend class="filter-title">Производители:</legend>
+                        <ul>
+                            <li class="filter-option">
+                                <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="bosch" id="filter-bosch" checked>
+                                <label for="filter-bosch">Bosch</label>
+                            </li>
+                             <li class="filter-option">
+                                <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="interskol" id="filter-interskol">
+                                <label for="filter-interskol">Интерскол</label>
+                            </li>
+                            <li class="filter-option">
+                                <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="makita" id="filter-makita" checked>
+                                <label for="filter-makita">Makita</label>
+                            </li>
+                            <li class="filter-option">
+                                <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="dewalt" id="filter-dewalt">
+                                <label for="filter-dewalt">Dewalt</label>
+                            </li>
+                            <li class="filter-option">
+                                <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="hitachi" id="filter-hitachi">
+                                <label for="filter-hitachi">Hitachi</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="filter-title">Питание:</legend>
+                        <ul>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" name="battery" value="accum" id="filter-accum" checked>
+                                <label for="filter-accum">Аккумуляторные</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-radio" name="battery" value="net" id="filter-net">
+                                <label for="filter-net">Сетевые</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="filter-button button">Показать</button>
+                </form>
             </section>
             
             <section class="catalog">
                 <h2 class="visually-hidden">Список товаров</h2>
+                <div>
+                    <p>Сортировка:</p>
+                    <ul>
+                        <li>По цене</li>
+                        <li>По типу</li>
+                        <li>По функционалу</li>
+                    </ul>
+                    <ul>
+                        <li>По возрастанию</li>
+                        <li>По убыванию</li>
+                    </ul>
+                </div>
                 <ul class="catalog-list">
                     <li class="catalog-item">
                         <img src="img/catalog-item-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -73,8 +139,8 @@
                         <span class="catalog-item-price-old">22 500 p.</span>
                         <span class="catalog-item-price">15 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                     <li class="catalog-item">
@@ -85,8 +151,8 @@
                         <span class="catalog-item-price-old">30 500 p.</span>
                         <span class="catalog-item-price">25 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                     <li class="catalog-item">
@@ -96,8 +162,8 @@
                         </h3>
                         <span class="catalog-item-price">12 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                     <li class="catalog-item">
@@ -108,8 +174,8 @@
                         <span class="catalog-item-price-old">22 500 p.</span>
                         <span class="catalog-item-price">15 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                     <li class="catalog-item">
@@ -120,8 +186,8 @@
                         <span class="catalog-item-price-old">30 500 p.</span>
                         <span class="catalog-item-price">25 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                     <li class="catalog-item">
@@ -131,8 +197,8 @@
                         </h3>
                         <span class="catalog-item-price">12 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                     <li class="catalog-item">
@@ -143,8 +209,8 @@
                         <span class="catalog-item-price-old">22 500 p.</span>
                         <span class="catalog-item-price">15 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                     <li class="catalog-item">
@@ -155,8 +221,8 @@
                         <span class="catalog-item-price-old">30 500 p.</span>
                         <span class="catalog-item-price">25 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                     <li class="catalog-item">
@@ -166,8 +232,8 @@
                         </h3>
                         <span class="catalog-item-price">12 500 р.</span>
                         <p class="hover-buttons">
-                            <button class="button-cart" type="submit">Купить</button>
-                            <button class="button-marker" type="submit">В закладки</button>
+                            <button class="button-cart" type="button">Купить</button>
+                            <button class="button-marker" type="button">В закладки</button>
                         </p>
                     </li>
                 </ul>

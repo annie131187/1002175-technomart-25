@@ -65,11 +65,15 @@
           <div class="promo-slider promo-slider-drill">
             <h3>Дрели</h3>
             <p>Соседям на радость!</p>
+            <button class="promo-slider-button" type="button">Вперед</button>
+            <button class="promo-slider-button" type="button">Назад</button>
             <a class="button" href="catalog.html">Открыть каталог</a>
           </div>
           <div class="promo-slider promo-slider-perforator">
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
+            <button class="promo-slider-button" type="button">Вперед</button>
+            <button class="promo-slider-button" type="button">Назад</button>
             <a class="button" href="catalog.html">Открыть каталог</a>
           </div>
         </div>
@@ -102,8 +106,8 @@
             <span class="catalog-item-price-old">32 500 p.</span>
             <span class="catalog-item-price">25 500 р.</span>
             <p class="hover-buttons">
-              <a class="button-cart" href="#">Купить</a>
-              <a class="button-marker" href="#">В закладки</a>
+              <button class="button-cart" type="button">Купить</button>
+              <button class="button-marker" type="button">В закладки</button>
             </p>
           </li>
           <li class="catalog-item">
@@ -114,8 +118,8 @@
             <span class="catalog-item-price-old">22 500 p.</span>
             <span class="catalog-item-price">15 500 р.</span>
             <p class="hover-buttons">
-              <a class="button-cart" href="#">Купить</a>
-              <a class="button-marker" href="#">В закладки</a>
+              <button class="button-cart" type="button">Купить</button>
+              <button class="button-marker" type="button">В закладки</button>
             </p>
           </li>
           <li class="catalog-item">
@@ -126,8 +130,8 @@
             <span class="catalog-item-price-old">30 500 p.</span>
             <span class="catalog-item-price">25 500 р.</span>
             <p class="hover-buttons">
-              <a class="button-cart" href="#">Купить</a>
-              <a class="button-marker" href="#">В закладки</a>
+              <button class="button-cart" type="button">Купить</button>
+              <button class="button-marker" type="button">В закладки</button>
             </p>
           </li>
           <li class="catalog-item">
@@ -137,8 +141,8 @@
             </h3>
             <span class="catalog-item-price">12 500 р.</span>
             <p class="hover-buttons">
-              <a class="button-cart" href="#">Купить</a>
-              <a class="button-marker" href="#">В закладки</a>
+              <button class="button-cart" type="button">Купить</button>
+              <button class="button-marker" type="button">В закладки</button>
             </p>
           </li>
         </ul>
@@ -181,9 +185,15 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <ul class="services-list">
-          <li class="service-delivery">Доставка</li>
-          <li class="service-guarantee">Гарантия</li>
-          <li class="service-credit">Кредит</li>
+          <li>
+            <button class="service-button service-delivery-button" type="button">Доставка</button>
+          </li>
+          <li>
+              <button class="service-button service-guarantee-button" type="button">Гарантия</button>
+          </li>
+          <li>
+              <button class="service-button service-credit-button" type="button">Кредит</button>
+          </li>
         </ul>
         <div class="service-slider service-slider-delivery">
           <h3>Доставка</h3>
@@ -244,8 +254,8 @@
           </p>
           <p>
             <label for="user-text">Текст письма</label>
-            <textarea name="text" id="user-text" rows="5" cols="100">
-              В свободной форме
+            <textarea name="text" id="user-text" rows="5" cols="100" placeholder="В свободной форме">
+              
             </textarea>
           </p>
           <button class="button" type="submit">Отправить</button>
