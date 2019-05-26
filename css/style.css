@@ -11,6 +11,22 @@ body {
     background-color: #ffffff;
 }
 
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
 }
@@ -36,8 +52,22 @@ button {
     border: none;
 }
 
+.page-header {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+.inner-page .page-header {
+    margin-bottom: 20px;
+}
+
 .header-top {
+    width: 100%;
     height: 42px;
+
     font-size: 17px;
     color: #ffffff;
 
@@ -48,6 +78,11 @@ button {
 .footer-logo {
     background-color: #ee3643;
     box-shadow: inset  0 -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.header-logo {
+    width: 109px;
+    height: 19px;
 }
 
 .header-top input[type="search"] {
@@ -93,6 +128,8 @@ button {
 }
 
 .header-main {
+    width: 100%;
+
     background-color: #f1f5f7;
 }
 
@@ -118,7 +155,10 @@ button {
     color: #32425c;
 }
 
-.user-nav li {
+.user-nav {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -145,27 +185,27 @@ button {
     text-decoration: underline;
 }
 
-.main-nav {
+.page-nav {
+    margin: 0;
+    padding: 0;
+
     font-size: 17px;
     line-height: 17px;
+    list-style: none;
     
     background-color: #32425c;
     box-shadow: inset 0 -5px 0 0 #293449;
 }
 
-.main-nav li {
-    list-style: none;
-}
-
-.main-nav a {
+.page-nav a {
     color: #ffffff;
 }
 
-.main-nav a:hover {
+.page-nav a:hover {
     background-color: #293449;
 }
 
-.main-nav a:focus {
+.page-nav a:focus {
     color: rgba(255, 255, 255, 0.5);
     background-color: #1d2739;
 }
@@ -175,6 +215,23 @@ button {
     line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.promo {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    margin-bottom: 53px;
+    padding: 0;
+}
+
+.promo-left {
+    width: 620px;
+}
+
+.promo-right {
+    width: 300px;
 }
 
 .promo-item {
@@ -258,6 +315,15 @@ button {
     background-color: #f9f5f0;
 }
 
+.popular-list {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
 .popular .section-title,
 .brands .section-title {
     color: #32425c;
@@ -272,7 +338,7 @@ button {
 .catalog-item {
     width: 220px;
     height: 318px;
-    margin-bottom: 50px;
+    
     list-style: none;
     border: 1px solid #eaeaea;
 }
@@ -309,6 +375,8 @@ button {
 }
 
 .hover-buttons {
+    display: none; 
+
     width: 218;
     height: 164px;
 
@@ -356,12 +424,20 @@ button {
 }
 
 .brands-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0;
+    margin-bottom: 65px;
+    padding: 0;
     list-style: none;
 }
 
 .brands-list-item {
     width: 220px;
     height: 145px;
+    margin-bottom: 20px;
 
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
@@ -377,6 +453,12 @@ button {
 }
 
 .services {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 80px;
+
     line-height: 24px;
 
     background-color: #f4f7f9;
@@ -419,8 +501,16 @@ button {
     text-transform: uppercase;
 }
 
+.index-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
 .about-us p {
+    margin: 0;
+    padding: 0;
     width: 519px;
+
     line-height: 24px;
 }
 
@@ -433,7 +523,10 @@ button {
 }
 
 .contacts {
+    margin: 0;
+    padding: 0;
     width: 300px;
+
     line-height: 24px;
 }
 
@@ -442,6 +535,10 @@ button {
 }
 
 .breadcrumbs {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -451,6 +548,10 @@ button {
 }
 
 .page-title {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
     font-family: Cuprum, Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
@@ -469,11 +570,23 @@ button {
     background-color: #f7f3ec;
 }
 
+.catalog-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters {
+    width: 220px;
+}
+
 .filter {
     text-transform: uppercase;
 }
 
 .filter fieldset {
+    margin: 0;
+    padding: 0;
+
     border: none;
 }
 
@@ -484,6 +597,9 @@ button {
 }
 
 .filter ul {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
     font-size: 15px;
     line-height: 20px;
@@ -493,7 +609,14 @@ button {
     color: rgba(0, 0, 0, 0.4);
 }
 
+.catalog {
+    width: 700px;
+}
+
 .catalog-filter ul {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
@@ -513,18 +636,35 @@ button {
     text-decoration: none;
 }
 
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+}
+
+.inner-page .catalog-item {
+    margin-bottom: 20px;
+}
+
 .pagination-list {
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+
     list-style: none;
 }
 
-.pagination-item {
+.pagination-item a {
     width: 38px;
     height: 38px;
 
     border: 1px solid #e5e5e5;
 }
 
-.pagination-item:last-child {
+.pagination-item:last-child a {
     width: 140px;
     height: 38px;
 }
@@ -534,23 +674,23 @@ button {
     text-transform: uppercase;
 }
 
-.pagination-item:hover {
+.pagination-item a:hover {
     border-color: #bdc6ca;
 }
 
-.pagination-item:active {
+.pagination-item a:active {
     border-color: #ee3643;
 }
 
-.pagination-item-current {
+.pagination-item-current a {
     color: #ffffff;
 
     background-color: #ee3643;
     border: 1px solid #ee3643;
 }
 
-.pagination-item-current:hover,
-.pagination-item-current:active {
+.pagination-item-current a:hover,
+.pagination-item-current a:active {
     color: #ffffff;
 
     background-color: #ee3643;
@@ -558,12 +698,16 @@ button {
 }
 
 .catalog-text {
-    font-family: Cuprum, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 
     background-color: #f4f7f9;
 }
 
 .catalog-text h2 {
+    padding-top: 65px;
+
+    font-family: Cuprum, Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
     font-weight: 400;
@@ -571,10 +715,26 @@ button {
 }
 
 .catalog-text p {
+    margin: 0;
+    padding-bottom: 70px;
+
     line-height: 24px;
 }
 
+.page-footer {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 86px;
+}
+
+.inner-page .page-footer {
+    margin-top: 0;
+}
+
 .footer-top {
+    width: 100%;
+
     font-size: 18px;
     line-height: 24px;
     color: #ffffff;
@@ -583,7 +743,14 @@ button {
 
 }
 
+.footer-logo {
+    width: 138;
+    height: 23px;
+}
+
 .footer-bottom {
+    width: 100%;
+
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
@@ -595,9 +762,12 @@ button {
     color: #ffffff;
 }
 
-.footer-nav li,
-.footer-catalog li,
-.footer-social li {
+.footer-nav,
+.footer-catalog,
+.footer-social {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
 
