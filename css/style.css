@@ -1,3 +1,12 @@
+html { 
+    box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+    box-sizing: inherit; 
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -96,6 +105,7 @@ input[type="radio"].visually-hidden {
 
 .header-logo {
     padding: 10px 55px;
+    z-index: 1;
 }
 
 .header-logo img {
@@ -120,6 +130,7 @@ input[type="radio"].visually-hidden {
     width: 17px;
     height: 17px;
 
+    fill: #ffffff;
     opacity: 0.3;
 }
 
@@ -135,9 +146,6 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
 
     background-color: transparent;
-    /* background-image: url("../img/icon-search.svg");
-    background-repeat: no-repeat;
-    background-position: 17px 12px; */
     border: none;
 }
 
@@ -161,6 +169,7 @@ input[type="radio"].visually-hidden {
 
 .header-search input:focus + svg {
     fill: red;
+    opacity: 1;
 }
 
 .header-top .user-menu-btn {
@@ -255,14 +264,19 @@ input[type="radio"].visually-hidden {
 
 .header-middle {
     display: flex;
-}
+    justify-content: space-between;
 
-.header-text {
-    width: 200px;
-    margin: 0;
     padding: 45px 0;
     padding-left: 50px;
     padding-bottom: 40px;
+    margin: 0;
+}
+
+.header-text {
+    width: 196px;
+    margin: 0;
+    margin-right: 71px;
+    padding: 0;
 
     font-style: italic;
     font-size: 16px;
@@ -275,8 +289,9 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-direction: column;
 
-    padding: 45px 65px;
-    padding-bottom: 40px;
+    min-width: 270px;
+    padding: 0;
+    margin: 0;
 }
 
 .header-contacts a {
@@ -284,7 +299,6 @@ input[type="radio"].visually-hidden {
 
     padding: 9px 52px;
     padding-left: 70px;
-    margin: 0;
     margin: 0;
     margin-bottom: 4px;
 
@@ -324,22 +338,24 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-wrap: wrap;
 
+    min-width: 281px;
     margin: 0;
     margin-left: auto;
+    margin-top: 15px;
     padding: 0;
-    padding-top: 55px;
 
     list-style: none;
 }
 
 .user-nav li {
     margin: 0;
+    margin-left: auto;
     padding: 0;
 }
 
 .user-nav a {
     margin: 0;
-    margin-right: 10px;
+    margin-right: 8px;
     padding: 10px 25px;
 
     font-size: 21px;
@@ -354,30 +370,38 @@ input[type="radio"].visually-hidden {
 }
 
 .user-nav .login-link {
-    position: relative;
-    padding-left: 48px;
+    padding-left: 45px;
 }
 
-.user-nav .login-link::before {
-    content: "";
+.user-nav li {
+    position: relative;
+}
 
+.login-icon {
     position: absolute;
-    top: 14px;
-    left: 14px;
+
+    top: 0;
+    left: 10px;
     width: 20px;
     height: 17px;
 
-    background-image: url("../img/icon-login.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    fill: #c5c5c5;
 }
 
 .user-nav a:hover {
     color: #ee3643;
 }
 
+.user-nav a:hover + svg {
+    fill: rgb(50, 66, 92);
+}
+
 .user-nav a:focus {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.user-nav a:active + svg {
+    fill: #c5c5c5;
 }
 
 .user-nav .user-link {
@@ -422,6 +446,9 @@ input[type="radio"].visually-hidden {
 }
 
 .section-title {
+    margin: 0;
+    padding: 0;
+
     font-size: 30px;
     line-height: 30px;
     font-weight: 400;
@@ -514,7 +541,6 @@ input[type="radio"].visually-hidden {
     width: 60px;
     height: 60px;
     background: url("../img/new-flag.png") no-repeat 0 0;
-
 }
 
 .promo-item-tool {
@@ -583,15 +609,33 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     top: 113px;
+    width: 22px;
+    height: 40px;
     z-index: 30;
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .slider-button-right {
     right: 20px;
+
+    background-image: url("../img/icon-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .slider-button-left {
     left: 25px;
+
+    background-image: url("../img/icon-left.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.slider-button:focus {
+    outline: none;
 }
 
 .promo-slider h3 {
@@ -630,7 +674,7 @@ input[type="radio"].visually-hidden {
     display: flex;
     justify-content: space-between;
 
-    padding: 0;
+    padding: 27px 27px;
     margin: 0;
     margin-bottom: 20px;
 
@@ -638,8 +682,10 @@ input[type="radio"].visually-hidden {
 }
 
 .section-top h2 {
-    padding: 30px 30px;
+    padding: 0;
     margin: 0;
+
+    vertical-align: middle;
 }
 
 .section-top .button {
@@ -647,8 +693,7 @@ input[type="radio"].visually-hidden {
     width: 253px;
 
     padding: 10px 0;
-    margin: 25px 0;
-    margin-right: 25px;
+    margin: 0;
 
     text-align: center;
 
@@ -661,6 +706,7 @@ input[type="radio"].visually-hidden {
 
 .popular-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     margin: 0;
@@ -723,8 +769,7 @@ input[type="radio"].visually-hidden {
     display: block;
     position: relative;
 
-    width: 80px;
-    padding: 10px 30px;
+    padding: 10px 35px;
     margin: 10px auto;
     margin-bottom: 20px;
 
@@ -769,10 +814,9 @@ input[type="radio"].visually-hidden {
     
     top: 0;
     left: 0;
-    margin-left: 42px;
-    margin-top: 44px;
     width: 218;
-    height: 88px;
+    margin: 0;
+    padding: 40px;
 
     font-size: 14px;
     line-height: 18px;
@@ -863,6 +907,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     margin-bottom: 60px;
     padding: 0;
+
 }
 
 .brands-list-item {
@@ -875,7 +920,7 @@ input[type="radio"].visually-hidden {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* display: block; */
+    
     width: 220px;
     height: 145px;
     margin: 0;
@@ -901,8 +946,9 @@ input[type="radio"].visually-hidden {
     width: 100%;
 
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 77px;
     padding: 0;
+    padding-top: 65px;
     padding-bottom: 100px;
     
     line-height: 24px;
@@ -911,12 +957,13 @@ input[type="radio"].visually-hidden {
 }
 
 .services h2 {
-    padding-top: 60px;
+    margin-bottom: 26px;
 }
 
 .services p {
     width: 398px;
-    margin-top: 30px;
+    padding: 0;
+    margin: 0;
 
     font-family: "PT Sans", Arial, sans-serif;
 }
@@ -942,7 +989,7 @@ input[type="radio"].visually-hidden {
 
     padding: 13px 0;
     padding-left: 22px;
-    padding-bottom: 17px;
+    padding-bottom: 19px;
 
     font-size: 21px;
     line-height: 30px;
@@ -977,6 +1024,7 @@ input[type="radio"].visually-hidden {
 
 .slider h3 {
     margin: 0;
+    margin-bottom: 25px;
     padding: 0;
         
     font-size: 36px;
@@ -986,16 +1034,19 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
 }
 
-.service-slider-delivery {
+.service-slider {
     width: 100%;
     position: absolute;
 
     top: 0;
     left: 0;
     padding: 0;
-    padding-bottom: 100px;
     margin: 0;
+}
 
+.service-slider-delivery {
+    padding-bottom: 100px;
+    
     z-index: 10;
 
     background: #f4f7f9 url("../img/delivery.png") no-repeat 151px 25px;
@@ -1007,19 +1058,11 @@ input[type="radio"].visually-hidden {
 
 
 .service-slider-guarantee {
-    width: 100%;
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    padding: 0;
     padding-bottom: 80px;
-    margin: 0;
-  
 
-    background: #f4f7f9 url("../img/guarantee.png") no-repeat 230px 0;
-
+    /* z-index: 10; */
    
+    background: #f4f7f9 url("../img/guarantee.png") no-repeat 230px 0;
 }
 
 .service-slider-guarantee p {
@@ -1027,21 +1070,16 @@ input[type="radio"].visually-hidden {
 }
 
 .service-slider-credit {
-    width: 100%;
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    padding: 0;
     padding-bottom: 95px;
-    margin: 0;
-    /* z-index: 20; */
+  
+    /* z-index: 10; */
 
     background: #f4f7f9 url("../img/credit.png") no-repeat 155px 0;
 }
 
 .service-slider-credit p {
     width: 279px;
+    margin-bottom: 25px;
 }
 
 .service-slider-credit .button {
@@ -1049,7 +1087,6 @@ input[type="radio"].visually-hidden {
     width: 195px;
     padding: 10px 0;
     margin: 0;
-    margin-top: 30px;
 
     text-align: center;
 
@@ -1059,16 +1096,28 @@ input[type="radio"].visually-hidden {
 .index-columns {
     display: flex;
     justify-content: space-between;
+
+    padding: 0;
+    margin: 0;
 }
 
-.about-us p {
+.index-columns p {
     margin: 0;
     padding: 0;
-    padding-bottom: 20px;
-    width: 519px;
 
     font-family: "PT Sans", Arial, sans-serif;
     line-height: 24px;
+
+}
+
+.about-us h2,
+.contacts h2  {
+    margin-bottom: 27px;
+}
+
+.about-us p {
+    padding-bottom: 23px;
+    width: 519px;
 }
 
 .transport-list {
@@ -1077,6 +1126,7 @@ input[type="radio"].visually-hidden {
 
     padding: 0;
     margin: 0;
+    margin-bottom: 35px;
     list-style: none;
 }
 
@@ -1087,6 +1137,10 @@ input[type="radio"].visually-hidden {
     padding-left: 36px;
 
     font-weight: 700;
+}
+
+.transport-list li:last-child {
+    padding-bottom: 0;
 }
 
 .transport-list li::before {
@@ -1107,7 +1161,6 @@ input[type="radio"].visually-hidden {
     width: 220px;
     padding: 10px 0;
     margin: 0;
-    margin-top: 20px;
 
     text-align: center;
 
@@ -1123,11 +1176,7 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts p {
-    padding: 0;
-    padding-bottom: 25px;
-    margin: 0;
-
-    font-family: "PT Sans", Arial, sans-serif;
+    margin-bottom: 30px;
 }
 
 .contacts img {
@@ -1135,6 +1184,7 @@ input[type="radio"].visually-hidden {
     height: 158px;
     padding: 0;
     margin: 0;
+    margin-bottom: 34px;
 }
 
 .contacts .button {
@@ -1143,7 +1193,6 @@ input[type="radio"].visually-hidden {
 
     padding: 10px 0;
     margin: 0;
-    margin-top: 35px;
 
     text-align: center;
 
@@ -1357,7 +1406,7 @@ input[type="radio"].visually-hidden {
 .footer-top {
     width: 100%;
     padding: 0;
-    padding-bottom: 55px;
+    padding-bottom: 50px;
     margin: 0;
 
     font-size: 18px;
@@ -1374,7 +1423,7 @@ input[type="radio"].visually-hidden {
    align-content: center;
     
     width: 220px;
-    padding: 18px 0;
+    padding: 20px 0;
     margin: 0;
 }
 
@@ -1418,6 +1467,7 @@ input[type="radio"].visually-hidden {
 .footer-nav,
 .footer-catalog {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-nav li, 
@@ -1433,7 +1483,8 @@ input[type="radio"].visually-hidden {
     display: flex;
     justify-content: space-between;
 
-    padding: 30px 0;
+    padding: 33px 0;
+    padding-right: 15px;
 }
 
 .footer-nav,
@@ -1530,17 +1581,139 @@ input[type="radio"].visually-hidden {
     width: 135px;
     padding: 0;
     margin: 0;
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 .footer-create {
     width: 96px;
     padding: 0;
-    padding-right: 15px;
     margin: 0;
-    margin-left: 45px;
+    margin-left: 35px;
 }
 
 .modal {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.modal .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icon-close.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+.modal-write-us {
     display: none;
+    width: 620px;
+    padding: 0;
+    padding-top: 45px;
+    margin: 0 auto;
+
+    font-size: 18px;
+    line-height: 18px;
+
+    background-color: #ffffff;
+    border-top: 7px solid rgb(255, 83, 88);
+}
+
+.write-us-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 80px;
+    margin: 0;
+}
+
+.write-us-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.write-us-item input,
+.write-us-item textarea {
+    border: 2px solid #dee3e4;
+    border-radius: 3px;
+}
+
+.write-us-item input::placeholder,
+.write-us-item textarea::placeholder {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #a9a9a9;
+}
+
+.write-us-item label {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.write-us-item input[type="text"],
+.write-us-item input[type="email"] {
+    width: 220px;
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 8px 15px;
+}
+
+.write-us-item textarea {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 8px 15px;
+}
+
+.write-us-button {
+    width: 100%;
+    margin: 0;
+    padding: 37px 0;
+
+    background-color: #f4f4f4;
+
+    box-sizing: content-box;
+}
+
+.write-us-button .button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+
+    text-align: center;
+
+    border-radius: 2px;
+}
+
+.modal-map {
+    display: none;
+    width: 940px;
+
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.modal-map p {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.modal-map img {
+    width: 940px;
+    height: 446px;
 }
