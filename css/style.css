@@ -54,13 +54,23 @@ input[type="radio"].visually-hidden {
 
 
 .button {
+    display: block;
+
+    padding: 10px 0;
+    margin: 0;
+
+    font-family: Cuprum, Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
+    text-align: center;
     text-transform: uppercase;
 
     background-color: #ee3643;
     border: none;
+    border-radius: 3px;
+
+    cursor: pointer;
 }
 
 .button:hover {
@@ -69,6 +79,7 @@ input[type="radio"].visually-hidden {
 
 .button:focus {
     background-color:#ba2732;
+    outline: none;
 }
 
 .page-header {
@@ -363,10 +374,6 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
-/* .inner-page .user-nav li {
-    margin-left: auto;
-} */
-
 .user-nav a {
     margin: 0;
     margin-right: 8px;
@@ -407,7 +414,7 @@ input[type="radio"].visually-hidden {
     color: #ee3643;
 }
 
-.user-nav a:hover + svg {
+.user-nav a:hover .user-icon {
     fill: rgb(50, 66, 92);
 }
 
@@ -415,7 +422,7 @@ input[type="radio"].visually-hidden {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.user-nav a:active + svg {
+.user-nav a:active .user-icon {
     fill: #c5c5c5;
 }
 
@@ -534,9 +541,14 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 300px;
     height: 123px;
 
+    padding: 22px 23px;;
+    margin: 0;
     margin-bottom: 20px;
 }
 
@@ -547,8 +559,6 @@ input[type="radio"].visually-hidden {
 .promo-item h3 {
     margin: 0;
     padding: 0;
-    padding-top: 21px;
-    padding-left: 22px;
 
     font-size: 24px;
     line-height: 30px;
@@ -557,20 +567,9 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-item .button {
-    display: inline-block;
-    min-width: 135px;
-    margin: 0;
-    margin-top: 12px;
-    margin-left: 25px;
-    padding: 10px 0;
-
-    font-size: 14px;
-    line-height: 18px;
-    text-align: center;
+    width: 135px;
 
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-    box-sizing: border-box;
 }
 
 .promo-item .button:hover {
@@ -712,16 +711,9 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-slider .button {
-    display: block;
     width: 195px;
-    margin: 0;
     margin-left: 25px;
     margin-top: 120px;
-    padding: 10px 0;
-
-    text-align: center;
-
-    border-radius: 2px;
 }
 
 .section-top {
@@ -743,15 +735,7 @@ input[type="radio"].visually-hidden {
 }
 
 .section-top .button {
-    display: block;
     width: 253px;
-
-    padding: 10px 0;
-    margin: 0;
-
-    text-align: center;
-
-    border-radius: 2px;
 }
 
 .popular {
@@ -789,6 +773,10 @@ input[type="radio"].visually-hidden {
     
     list-style: none;
     border: 1px solid #eaeaea;
+}
+
+.catalog-item:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .catalog-item-new::after {
@@ -883,11 +871,7 @@ input[type="radio"].visually-hidden {
     position: relative;
 
     width: 135px;
-    margin: 0;
     margin-bottom: 5px;
-    padding: 10px 35px;
-
-    color: #ffffff;
 
     background-color: #63a63e;
     box-shadow: inset 0 -3px 0 0 #367315;
@@ -925,7 +909,6 @@ input[type="radio"].visually-hidden {
 
 .hover-buttons .button-marker {
     width: 135px;
-    margin: 0;
     padding: 7px 20px;
 
     color: #32425c;
@@ -1048,11 +1031,11 @@ input[type="radio"].visually-hidden {
     font-size: 21px;
     line-height: 30px;
     font-weight: bold;
-    color: #ffffff;
     text-transform: none;
     text-align: left;
 
     background-color: #32425c;
+    border-radius: 0;
     box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
 }
 
@@ -1137,14 +1120,7 @@ input[type="radio"].visually-hidden {
 }
 
 .service-slider-credit .button {
-    display: block;
     width: 195px;
-    padding: 10px 0;
-    margin: 0;
-
-    text-align: center;
-
-    border-radius: 2px;
 }
 
 .index-columns {
@@ -1210,15 +1186,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us .button {
-    display: block;
-
     width: 220px;
-    padding: 10px 0;
-    margin: 0;
-
-    text-align: center;
-
-    border-radius: 2px;
 }
 
 .contacts {
@@ -1242,15 +1210,7 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts .button {
-    display: block;
     width: 300px;
-
-    padding: 10px 0;
-    margin: 0;
-
-    text-align: center;
-
-    border-radius: 2px;
 }
 
 .inner-page main {
@@ -1335,11 +1295,15 @@ input[type="radio"].visually-hidden {
 }
 
 .subtitle {
+    padding: 11px 18px;
+    margin: 0;
+    margin-bottom: 20px;
     font: inherit;
 
     text-transform: uppercase;
 
     background-color: #f7f3ec;
+    border-radius: 2px;
 }
 
 .catalog-columns {
@@ -1353,19 +1317,112 @@ input[type="radio"].visually-hidden {
 
 .filter {
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 }
 
-.filter fieldset {
-    margin: 0;
+.filter-item { 
     padding: 0;
+    padding-bottom: 23px;
+    margin: 0;
+    margin-bottom: 25px;
 
     border: none;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.filter legend {
+.filter-item:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 75px;
+    border-bottom: none;
+}
+
+.filter-title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
     font-size: 17px;
     line-height: 30px;
     font-weight: bold;
+}
+
+.range-filter {
+    width: 100%;
+}
+
+.range-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    height: 80px;
+    margin-bottom: 9px;
+
+    background-color: #f7f3ec;
+    border-radius: 3px;
+}
+
+.range-controls .scale {
+    width: 180px;
+    height: 2px;
+
+    background: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 152px;
+    height: 2px;
+
+    background: green;
+}
+
+.range-controls .range-btn {
+    position: absolute;
+    top: 29px;
+
+    width: 5px;
+    height: 5px;
+    padding: 0;
+
+    border: 10px solid #ffffff;
+    background-color: grey;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #d7dcde;
+    cursor: pointer;
+}
+
+.range-controls .range-btn-right {
+    left: 160px;
+}
+
+.range-controls .range-btn-left {
+    left: 20px;
+}
+
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-controls input {
+    width: 95px;
+    padding: 14px 0;
+    font-size: 17px;
+    line-height: 18px;
+    text-align: center;
+
+    border: none;
+    border-radius: 3px;
+    background: #f7f3ec;
+}
+
+.price-controls .dash {
+    width: 10px;
+    height: 1px;
+
+    background: #000000;
 }
 
 .filter ul {
@@ -1377,25 +1434,157 @@ input[type="radio"].visually-hidden {
     line-height: 20px;
 }
 
+.filter-option {
+    margin-bottom: 17px;
+    padding-left: 35px;
+}
+
+.filter-option label {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -35px;
+    width: 23px;
+    height: 23px;
+
+    border: 2px solid #c5c5c5;
+    border-radius: 2px;
+}
+
+.filter-input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -35px;
+    width: 27px;
+    height: 23px;
+
+    background: url("../img/checkbox-on.svg") no-repeat 0 0;
+}
+
+.filter-input-radio + label::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -35px;
+    width: 25px;
+    height: 25px;
+
+    border: 4px solid #c5c5c5;
+    border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+    content: "";
+    position: absolute;
+
+    top: 8px;
+    left: -27px;
+    width: 9px;
+    height: 9px;
+
+    background-color: #c5c5c5;
+    border-radius: 50%;
+}
+
+.filter-input + label:hover::before {
+    border-color: #b5b5b5;
+}
+
+.filter-input-radio:checked:hover + label::after {
+    background-color: #b5b5b5;
+}
+
 .filter-input:disabled + label {
     color: rgba(0, 0, 0, 0.4);
+}
+
+.filter-input:disabled + label::before {
+    opacity: 0.3;
+}
+
+.filter-button {
+    width: 140px;
+    
+    color: #000000;
+
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
 }
 
 .catalog {
     width: 700px;
 }
 
+.catalog-filter {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 11px 18px;
+    margin: 0;
+    margin-bottom: 20px;
+
+    background-color: #f7f3ec;
+    border-radius: 2px;
+}
+
+.catalog-filter .subtitle {
+    padding: 0;
+    margin: 0;
+    margin-right: 139px;
+}
+
 .catalog-filter ul {
+    display: flex;
+
     margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
+.catalog-filter .sort-type {
+    justify-content: space-between;
+    min-width: 354px;
+}
+
+.catalog-filter .sort-range {
+    justify-content: space-between;
+    width: 43px;
+}
+
+.sort-range a {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.sort-range a:hover .sort-range-icon {
+    fill: #231F20;
+}
+
+.sort-range a:active .sort-range-icon,
+.sort-range a:focus .sort-range-icon {
+    fill: #ee3643;
+}
+
 .catalog-filter a {
-  color: rgba(0, 0, 0, 0.18);
-  text-transform: uppercase; 
-  text-decoration: underline dotted #ee3643; 
+    padding: 10px 0;
+
+    color: rgba(0, 0, 0, 0.18);
+    text-transform: uppercase; 
+    text-decoration: underline dotted #ee3643; 
 }
 
 .catalog-filter a:hover {
@@ -1414,6 +1603,7 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
 
     margin: 0;
+    margin-bottom: 52px;
     padding: 0;
 }
 
@@ -1422,6 +1612,8 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-list {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
     margin-bottom: 60px;
     padding: 0;
@@ -1429,16 +1621,22 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
-.pagination-item a {
-    width: 38px;
-    height: 38px;
+.pagination-item {
+    margin-right: 10px;
+}
 
+.pagination-item:last-child {
+    margin-right: 0;
+}
+
+.pagination-item a {
+    padding: 10px 15px;
     border: 1px solid #e5e5e5;
+    border-radius: 3px;
 }
 
 .pagination-item:last-child a {
-    width: 140px;
-    height: 38px;
+    padding: 10px 30px;
 }
 
 .pagination-item a {
@@ -1792,14 +1990,7 @@ input[type="radio"].visually-hidden {
 }
 
 .write-us-button .button {
-    display: block;
     width: 100%;
-    padding: 10px 0;
-    margin: 0;
-
-    text-align: center;
-
-    border-radius: 2px;
 }
 
 .modal-map {
@@ -1813,8 +2004,6 @@ input[type="radio"].visually-hidden {
     padding: 0;
     margin: 0;
 }
-
-
 
 .modal-map img {
     width: 940px;
