@@ -1525,6 +1525,16 @@ input[type="radio"].visually-hidden {
     border: 1px solid #e5e5e5;
 }
 
+.filter-button:hover {
+    border-color: #bdc6ca;
+    background-color: transparent;
+}
+
+.filter-button:focus {
+    border-color: #ee3643;
+    background-color: transparent;
+}
+
 .catalog {
     width: 700px;
 }
