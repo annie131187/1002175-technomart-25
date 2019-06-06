@@ -637,7 +637,7 @@ input[type="radio"].visually-hidden {
     padding: 0;
     top: 0;
     left: 0;
-    z-index: 20;
+    z-index: 10;
 
     background-color: #212a3a;
     background-image: url("../img/promo-slide-1.jpg");
@@ -653,7 +653,7 @@ input[type="radio"].visually-hidden {
     padding: 0;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1;
 
     background-color: #212a3a;
     background-image: url("../img/promo-slide-2.jpg");
@@ -668,7 +668,7 @@ input[type="radio"].visually-hidden {
     top: 113px;
     width: 22px;
     height: 40px;
-    z-index: 30;
+    z-index: 20;
 
     border: none;
     background-color: transparent;
@@ -1923,9 +1923,13 @@ input[type="radio"].visually-hidden {
 }
 
 .modal {
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 30;
+    transform: translate(-50%, -50%);
+    /* margin: 0 auto;
+    padding: 0; */
 }
 
 .modal .modal-close {
@@ -1950,21 +1954,22 @@ input[type="radio"].visually-hidden {
     width: 620px;
     padding: 0;
     padding-top: 45px;
-    margin: 0 auto;
+    margin: 0;
 
     font-size: 18px;
     line-height: 18px;
 
     background-color: #ffffff;
     border-top: 7px solid rgb(255, 83, 88);
+    box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
-.write-us-form {
+.write-us-input {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 80px;
     margin: 0;
+    padding: 0 80px;
 }
 
 .write-us-item {
@@ -2009,18 +2014,28 @@ input[type="radio"].visually-hidden {
     padding: 8px 15px;
 }
 
+.write-us-item input:hover,
+.write-us-item textarea:hover {
+    border-color: #b5b5b5;
+}
+
+.write-us-item input:focus,
+.write-us-item textarea:focus {
+    border-color: #ee3643;
+    outline: none;
+}
+
 .write-us-button {
     width: 100%;
     margin: 0;
     padding: 37px 0;
 
     background-color: #f4f4f4;
-
-    box-sizing: content-box;
 }
 
 .write-us-button .button {
-    width: 100%;
+    width: 460px;
+    margin: 0 80px;
 }
 
 .modal-map {
@@ -2042,4 +2057,49 @@ input[type="radio"].visually-hidden {
 
 .modal-cart-add {
     display: none;
+    width: 620px;
+    padding: 0;
+
+    background-color: #ffffff;
+    border-top: 7px solid rgb(255, 83, 88);
+    box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal-cart-add h2 {
+    position: relative;
+    padding: 50px 115px;
+    padding-left: 170px;
+
+    font-family: Cuprum, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.modal-cart-add h2::before {
+    content: "";
+
+    position: absolute;;
+    width: 66px;
+    height: 66px;
+
+    background: url ("../img/modal-check.svg") no-repeat 0 0;
+}
+
+.cart-add-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 37px 80px;
+
+    background-color: #f4f4f4;
+}
+
+.cart-add-buttons .button {
+    width: 220px;
+}
+
+.cart-add-buttons .modal-close-btn {
+    background-color: #ffffff;
+    color: #000000;
 }
