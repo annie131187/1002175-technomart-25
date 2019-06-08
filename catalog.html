@@ -170,7 +170,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="catalog-list">
+                        <ul class="popular-list catalog-list">
                             <li class="catalog-item">
                                 <img src="img/catalog-item-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                                 <h3>
@@ -296,15 +296,6 @@
                     </p>
                 </div>
             </article>
-
-            <section class="modal modal-cart-add">
-                <h2>Товар добавлен в корзину!</h2>
-                <div class="cart-add-buttons">
-                    <a class="button" href="#">Оформить заказ</a>
-                    <button class="button modal-close-btn" type="button">Продолжить покупки</button> 
-                </div>
-                <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-            </section>
         </main>
         <footer class="page-footer">
             <div class="footer-top">
@@ -335,7 +326,6 @@
                 </div>
             </div>
 
-
             <div class="footer-bottom">
                 <div class="container">
                     <div class="footer-bottom-container">
@@ -358,5 +348,31 @@
                 </div>  
             </div>
         </footer>
+
+        <section class="modal modal-cart-add">
+            <h2>Товар добавлен в корзину!</h2>
+            <div class="cart-add-buttons">
+                <a class="button" href="#">Оформить заказ</a>
+                <button class="button modal-close-btn" type="button">Продолжить покупки</button> 
+            </div>
+            <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        </section>
+
+        <script>
+            var cartButton = document.querySelectorAll(".button-cart");
+
+            var cartPopup = document.querySelector(".modal-cart-add");
+            var cartClose = cartPopup.querySelector(".modal-close");
+
+            cartButton.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                cartPopup.classList.add("modal-show");
+            });
+
+            cartClose.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                cartPopup.classList.remove("modal-show");
+            });
+        </script>
     </body>
 </html>
