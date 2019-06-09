@@ -161,7 +161,6 @@
               <h3>
                 <a href="catalog-item.html">Перфоратор BOSCH BFG 2000</a>
               </h3>
-              <span class="catalog-item-discount"></span>
               <span class="catalog-item-price">12500 р.</span>
               <p class="hover-buttons">
                 <button class=" button button-cart" type="button">Купить</button>
@@ -370,12 +369,12 @@
       var popup = document.querySelector(".modal-write-us");
       var close = popup.querySelector(".modal-close");
 
-      var name = popup.querySelector(".input-user-name");
+      var username = popup.querySelector(".input-user-name");
 
       openform.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
-        name.focus();
+        username.focus();
       });
 
       close.addEventListener("click", function (evt) {
