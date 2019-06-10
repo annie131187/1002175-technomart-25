@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин "Техномарт"</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -81,7 +81,13 @@
               <h3>Инструмент</h3>
               <a class="button" href="#">На все случаи</a>
             </div>
-            <div class="promo-slider">             
+            <div class="promo-slider">
+                <input class="visually-hidden" type="radio" id="product-1" name="toggle">
+                <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
+              <div class="slider-controls">
+                <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+                <label class="active slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
+              </div>             
               <button class="slider-button slider-button-right" type="button"><span class="visually-hidden">Вперед</span></button>
               <button class="slider-button slider-button-left" type="button"><span class="visually-hidden">Назад</span></button>
               
@@ -275,7 +281,6 @@
           </section>
         </div>
       </div>
-      </section>
     </main>
 
     <footer class="page-footer">
@@ -362,6 +367,7 @@
         </p>
         <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </div>
+    </section>
 
     <script>
       var openform = document.querySelector(".button-open-form");
