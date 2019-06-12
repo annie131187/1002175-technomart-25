@@ -2026,6 +2026,7 @@ input[type="radio"].visually-hidden {
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index: 3;
     width: 22px;
     height: 22px;
     margin: 0;
@@ -2129,13 +2130,25 @@ input[type="radio"].visually-hidden {
 
 .modal-map {
     width: 940px;
+    height: 446px;
 
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
 }
 
 .modal-map p {
-    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
     margin: 0;
+}
+
+.modal-map iframe {
+    position: relative;
+    z-index: 2;
+
+    border: none;
 }
 
 .modal-map img {
