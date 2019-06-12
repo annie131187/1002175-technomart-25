@@ -345,11 +345,11 @@
           </p>
           <p class="write-us-item">
             <label for="user-email">Ваш e-mail:</label>
-            <input type="email" placeholder="email@example.com" name="email" id="user-email">
+            <input class="input-user-email" type="email" placeholder="email@example.com" name="email" id="user-email">
           </p>
           <p class="write-us-item">
             <label for="user-text">Текст письма:</label>
-            <textarea name="text" id="user-text" rows="5" cols="100" placeholder="В свободной форме"></textarea>
+            <textarea class="input-user-text" name="text" id="user-text" rows="5" cols="100" placeholder="В свободной форме"></textarea>
           </p>
         </div>
         <p class="write-us-button">
@@ -367,20 +367,31 @@
     </section>
 
     <script>
-      var openform = document.querySelector(".button-open-form");
+      var openForm = document.querySelector(".button-open-form");
       var popup = document.querySelector(".modal-write-us");
       var close = popup.querySelector(".modal-close");
-      var username = popup.querySelector(".input-user-name");
+      var form = popup.querySelector("form");
+      var userName = popup.querySelector(".input-user-name");
+      var userEmail = popup.querySelector(".input-user-email");
+      var userText = popup.querySelector(".input-user-text");
 
-      openform.addEventListener("click", function (evt) {
+      openForm.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
-        username.focus();
+        userName.focus();
       });
 
       close.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      });
+
+      form.addEventListener("submit", function (evt) {
+        if (!userName.value || !userEmail.value || !userText.value) {
+          evt.preventDefault();
+          popup.classList.add("modal-error");
+        }
       });
 
       window.addEventListener("keydown", function (evt) {
@@ -388,6 +399,7 @@
         if (evt.keyCode === 27) {
           if (popup.classList.contains("modal-show")) {
             popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
           }
         }
       });
@@ -395,7 +407,7 @@
       var openMap = document.querySelector(".modal-map-link");
       var mapPopup = document.querySelector(".modal-map");
       var mapClose = mapPopup.querySelector(".modal-close");
-      
+
       openMap.addEventListener("click", function (evt) {
         evt.preventDefault();
         mapPopup.classList.add("modal-show");

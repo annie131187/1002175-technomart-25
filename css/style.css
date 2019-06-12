@@ -2007,19 +2007,49 @@ input[type="radio"].visually-hidden {
     margin-left: 35px;
 }
 
+@keyframes swing {
+    0% {
+        transform: translateX(-200px);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateY(-10px);
+    }
+    30%, 50%, 70%, 90% {
+        transform: translateY(10px);
+    }
+}
+
 .modal {
-    display: none;
     position: fixed;
+    display: none;
+    
     top: 50%;
     left: 50%;
     z-index: 30;
     transform: translate(-50%, -50%);
-    /* margin: 0 auto;
-    padding: 0; */
+    /* margin: 0 auto; */
 }
 
 .modal-show {
     display: block;
+
+    animation: swing 0.4s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
 
 .modal .modal-close {
