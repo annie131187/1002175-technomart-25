@@ -118,17 +118,27 @@ input[type="radio"].visually-hidden {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin: 0;
 }
 
 .header-logo,
 .footer-logo {
     background-color: #ee3643;
     -webkit-box-shadow: 0 5px 0 0 rgb(181, 41, 51);
-            box-shadow: 0 5px 0 0 rgb(181, 41, 51);
+        box-shadow: 0 5px 0 0 rgb(181, 41, 51);
+}
+
+.header-logo:hover {
+    background-color: #ca2c37;
+}
+
+.header-logo:active {
+    background-color: #ba2732;
 }
 
 .header-logo {
-    padding: 10px 55px;
+    padding: 0 55px;
+    padding-top: 12px;
     z-index: 1;
 }
 
@@ -144,6 +154,8 @@ input[type="radio"].visually-hidden {
 
 .header-search {
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 .header-search svg {
@@ -162,7 +174,7 @@ input[type="radio"].visually-hidden {
     width: 270px;
     
     margin: 0;
-    padding: 13px 0;
+    padding: 12px 0;
     padding-left: 49px;
     
     font-size: 17px;
@@ -210,14 +222,11 @@ input[type="radio"].visually-hidden {
 
 .header-top .user-menu-btn {
     width: 150px;
-    padding: 13px 0;
+    padding: 0;
+    padding-top: 12px;
     margin: 0;
     
     color: #ffffff;
-
-    -webkit-box-sizing: border-box;
-
-            box-sizing: border-box;
 }
 
 .header-top .user-menu-btn-marker {
@@ -313,7 +322,7 @@ input[type="radio"].visually-hidden {
             justify-content: space-between;
 
     padding: 45px 0;
-    padding-left: 50px;
+    padding-left: 52px;
     padding-bottom: 40px;
     margin: 0;
 }
@@ -352,10 +361,10 @@ input[type="radio"].visually-hidden {
 .header-contacts a {
     position: relative;
 
-    padding: 9px 52px;
-    padding-left: 70px;
+    padding: 9px 50px;
+    padding-left: 73px;
     margin: 0;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 
     font-size: 21px;
     line-height: 21px;
@@ -370,7 +379,7 @@ input[type="radio"].visually-hidden {
 
     position: absolute;
     top: 10px;
-    left: 13px;
+    left: 15px;
     width: 19px;
     height: 19px;
 
@@ -382,7 +391,7 @@ input[type="radio"].visually-hidden {
 .header-address {
     margin: 0;
     padding: 0;
-    padding-left: 13px;
+    padding-left: 12px;
 
     font-size: 14px;
     line-height: 24px;
@@ -416,9 +425,10 @@ input[type="radio"].visually-hidden {
 .user-nav a {
     display: inline-block;
     margin: 0;
-    margin-right: 8px;
+    margin-right: 10px;
     padding: 12px 25px;
 
+    vertical-align: top;
     font-size: 21px;
     line-height: 21px;
     color: #000000;
@@ -426,23 +436,24 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
 }
 
-.inner-page .user-nav a {
+.user-nav .reg-link {
     margin-right: 0;
 }
 
-.user-nav .reg-link {
+.inner-page .user-nav a {
     margin-right: 0;
 }
 
 .user-nav .login-link,
 .user-nav .profile-link {
     padding-left: 45px;
+    margin-bottom: 5px;
 }
 
 .login-icon {
     position: absolute;
 
-    top: 12px;
+    top: 15px;
     left: 13px;
     width: 20px;
     height: 17px;
@@ -468,7 +479,7 @@ input[type="radio"].visually-hidden {
 
 .profile-link-icon {
     position: absolute;
-    top: 12px;
+    top: 14px;
     left: 13px;
 
     width: 20px;
@@ -484,7 +495,7 @@ input[type="radio"].visually-hidden {
 
 .exit-profile-link-icon {
     position: absolute;
-    top: 12px;
+    top: 14px;
     left: 12px;
     width: 20px;
     height: 17px;
@@ -493,7 +504,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-nav .user-link {
-    padding: 0 15px;
+    padding: 0 17px;
     margin: 0;
     font-size: 16px;
     line-height: 18px;
@@ -529,7 +540,7 @@ input[type="radio"].visually-hidden {
             justify-content: space-between;
     
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
     padding: 0 20px;
 
     font-size: 17px;
@@ -537,14 +548,14 @@ input[type="radio"].visually-hidden {
     list-style: none;
     
     background-color: #32425c;
-    -webkit-box-shadow: inset 0 -5px 0 0 #293449;
-            box-shadow: inset 0 -5px 0 0 #293449;
+    -webkit-box-shadow: 0 5px 0 0 #293449;
+        box-shadow: 0 5px 0 0 #293449;
 }
 
 .page-nav a {
     display: block;
     margin: 0;
-    padding: 20px 31px;
+    padding: 18px 31px;
 
     vertical-align: middle;
     color: #ffffff;
@@ -860,7 +871,7 @@ input[type="radio"].visually-hidden {
         -ms-flex-pack: justify;
             justify-content: space-between;
 
-    padding: 27px 27px;
+    padding: 26px 27px;
     margin: 0;
     margin-bottom: 20px;
 
@@ -868,7 +879,7 @@ input[type="radio"].visually-hidden {
 }
 
 .section-top h2 {
-    padding: 0;
+    padding-top: 3px;
     margin: 0;
 
     vertical-align: middle;
@@ -925,7 +936,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 20px;
 
     width: 220px;
-    height: 318px;
+    min-height: 318px;
     
     list-style: none;
     border: 1px solid #eaeaea;
@@ -988,7 +999,7 @@ input[type="radio"].visually-hidden {
     display: block;
     position: relative;
 
-    padding: 10px 35px;
+    padding: 10px 36px;
     margin: 0 auto;
     margin-top: 42px;
     margin-bottom: 20px;
@@ -1108,7 +1119,7 @@ input[type="radio"].visually-hidden {
 }
 
 .brands {
-    margin-bottom: 60px;
+    margin-bottom: 65px;
 }
 
 .brands-list {
@@ -1201,7 +1212,7 @@ input[type="radio"].visually-hidden {
             justify-content: space-between;
 
     margin: 0;
-    margin-top: 70px;
+    margin-top: 65px;
     padding: 0;
 }
 
@@ -1215,9 +1226,9 @@ input[type="radio"].visually-hidden {
 .service-button {
     width: 240px;
 
-    padding: 13px 0;
+    padding: 16px 0;
     padding-left: 22px;
-    padding-bottom: 19px;
+    padding-bottom: 17px;
 
     font-size: 21px;
     line-height: 30px;
@@ -1228,7 +1239,7 @@ input[type="radio"].visually-hidden {
     background-color: #32425c;
     border-radius: 0;
     -webkit-box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
-            box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
+        box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
 }
 
 .service-button:hover {
@@ -1289,8 +1300,6 @@ input[type="radio"].visually-hidden {
 
 .service-slider-guarantee {
     padding-bottom: 80px;
-
-    /* z-index: 10; */
    
     background: #f4f7f9 url("../img/guarantee.png") no-repeat 230px 0;
 }
@@ -1302,8 +1311,6 @@ input[type="radio"].visually-hidden {
 .service-slider-credit {
     padding-bottom: 95px;
   
-    /* z-index: 10; */
-
     background: #f4f7f9 url("../img/credit.png") no-repeat 155px 0;
 }
 
@@ -1344,7 +1351,7 @@ input[type="radio"].visually-hidden {
 
 .about-us p {
     padding-bottom: 23px;
-    width: 519px;
+    width: 525px;
 }
 
 .transport-list {
@@ -1353,7 +1360,8 @@ input[type="radio"].visually-hidden {
 
     padding: 0;
     margin: 0;
-    margin-bottom: 35px;
+    margin-top: -3px;
+    margin-bottom: 37px;
     list-style: none;
 }
 
@@ -1374,7 +1382,7 @@ input[type="radio"].visually-hidden {
     content: "";
 
     position: absolute;
-    top: 8px;
+    top: 9px;
     left: 0;
     width: 25px;
     height: 2px;
@@ -1403,7 +1411,7 @@ input[type="radio"].visually-hidden {
     height: 158px;
     padding: 0;
     margin: 0;
-    margin-bottom: 34px;
+    margin-bottom: 33px;
 }
 
 .contacts .button {
@@ -1484,7 +1492,7 @@ input[type="radio"].visually-hidden {
 .page-title {
     margin: 0;
     margin-bottom: 20px;
-    padding: 30px;
+    padding: 29px;
 
     font-family: Cuprum, Arial, sans-serif;
     font-size: 30px;
@@ -2103,8 +2111,8 @@ input[type="radio"].visually-hidden {
     text-decoration: none;
 }
 
-.footer-feedback a:focus,
-.footer-create a:focus {
+.footer-feedback a:active,
+.footer-create a:active {
     color: #ee3643;
 }
 
@@ -2240,15 +2248,6 @@ input[type="radio"].visually-hidden {
 .modal {
     position: fixed;
     display: none;
-    
-    /* top: 50%;
-    left: 50%;
-    z-index: 30;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    margin-top: 50%;
-    margin-left: ; */
 }
 
 .modal-show {
