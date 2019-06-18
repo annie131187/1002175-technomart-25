@@ -5,7 +5,7 @@
     <title>Интернет-магазин "Техномарт"</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
 
@@ -92,15 +92,17 @@
               <button class="slider-button slider-button-right" type="button"><span class="visually-hidden">Вперед</span></button>
               <button class="slider-button slider-button-left" type="button"><span class="visually-hidden">Назад</span></button>
               
-              <div class="promo-slider-drill">
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
-                <a class="button" href="catalog.html">Открыть каталог</a>
-              </div>
-              <div class="promo-slider-perforator">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-                <a class="button" href="catalog.html">Открыть каталог</a>
+              <div class="promo-slider-wrapper">
+                <div class="promo-slider-drill">
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость!</p>
+                  <a class="button" href="catalog.html">Открыть каталог</a>
+                </div>
+                <div class="promo-slider-perforator">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a class="button" href="catalog.html">Открыть каталог</a>
+                </div>
               </div>
             </div>
           </div>
@@ -277,7 +279,7 @@
             <h2 class="section-title">Контакты</h2>
             <p>Вы можете забрать товар сами, <br>
             заехав в наш офис:</p>
-            <a class="modal-map-link" href="https://yandex.ru/maps"><img src="img/map-small.png" width="300" height="158" alt="Адрес магазина на карте"></a>
+            <a class="modal-map-link" href="https://goo.gl/maps/RBn7Jcetv797ywLC7"><img src="img/map-small.png" width="300" height="158" alt="Адрес магазина на карте"></a>
             <a class="button button-open-form" href="form.html">Заблудились? Напишите нам!</a>
           </section>
         </div>
@@ -336,6 +338,15 @@
       </div>
     </footer> 
 
+    <section class="modal modal-cart-add">
+      <h2>Товар добавлен в корзину!</h2>
+      <div class="cart-add-buttons">
+          <a class="button" href="#">Оформить заказ</a>
+          <button class="button modal-close-btn" type="button">Продолжить покупки</button> 
+      </div>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </section>
+
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
@@ -367,7 +378,8 @@
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
-    <script src="js/openform.js"></script>
-    <script src="js/openmap.js"></script>
+    <script src="js/opencartadd.min.js"></script>
+    <script src="js/openform.min.js"></script>
+    <script src="js/openmap.min.js"></script>
   </body>
 </html>
