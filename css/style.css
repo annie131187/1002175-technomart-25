@@ -1273,6 +1273,8 @@ input[type="radio"].visually-hidden {
 }
 
 .service-button-active {
+    display: block;
+
     color: #32425c;
 
     outline: none;
@@ -1281,7 +1283,9 @@ input[type="radio"].visually-hidden {
             box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
 }
 
-.service-button-active:hover {
+.service-button-active:hover,
+.service-button-active:focus,
+.service-button-active:active {
     background-color: #ffffff;
 }
 
@@ -1305,6 +1309,7 @@ input[type="radio"].visually-hidden {
 }
 
 .service-slider {
+    display: none;
     width: 100%;
     min-height: 288px;
     
@@ -1312,9 +1317,11 @@ input[type="radio"].visually-hidden {
     margin: 0;
 }
 
-.service-slider-delivery {
-    /* z-index: 10; */
+.service-slider-active {
+    display: block;
+}
 
+.service-slider-delivery {    
     background: #f4f7f9 url("../img/delivery.png") no-repeat 151px 25px;
 }
 
@@ -1323,9 +1330,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 0;
 }
 
-.service-slider-guarantee {
-    display: none;
-    /* z-index: 9;  */
+.service-slider-guarantee {    
     background: #f4f7f9 url("../img/guarantee.png") no-repeat 230px 0;
 }
 
@@ -1334,9 +1339,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 0;
 }
 
-.service-slider-credit {
-    display: none;  
-    /* z-index: 8; */
+.service-slider-credit {    
     background: #f4f7f9 url("../img/credit.png") no-repeat 155px 0;
 }
 
