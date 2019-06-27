@@ -561,7 +561,6 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 18px 30px;
 
-    vertical-align: middle;
     color: #ffffff;
 }
 
@@ -780,6 +779,8 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-slider-drill {
+    display: none;
+
     position: absolute;
     width: 620px;
     height: 266px;
@@ -796,6 +797,8 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-slider-perforator {
+    display: none;
+
     position: absolute;
     width: 620px;
     height: 266px;
@@ -809,6 +812,10 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/promo-slide-2.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
+}
+
+.slider-active {
+    display: block;
 }
 
 .slider-button {
